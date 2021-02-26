@@ -2,8 +2,8 @@
 # Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl
 
 module "base" {
-  source  = "oracle-terraform-modules/base/oci"
-  version = "2.0.0"
+  source = "github.com/karthicgit/terraform-oci-base"
+  #version = "2.0.0"
 
   # general oci parameters
   oci_base_general = local.oci_base_general
@@ -32,9 +32,11 @@ module "policies" {
   # provider
   api_fingerprint      = var.api_fingerprint
   api_private_key_path = var.api_private_key_path
+  api_private_key      = var.api_private_key
   region               = var.region
   tenancy_id           = var.tenancy_id
   user_id              = var.user_id
+  passphrase           = var.passphrase
 
   ssh_keys = local.oci_base_ssh_keys
 

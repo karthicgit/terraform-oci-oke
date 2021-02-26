@@ -11,7 +11,9 @@ locals {
 
   oci_base_provider = {
     api_fingerprint      = var.api_fingerprint
+    passphrase           = var.passphrase
     api_private_key_path = var.api_private_key_path
+    api_private_key      = var.api_private_key
     region               = var.region
     tenancy_id           = var.tenancy_id
     user_id              = var.user_id

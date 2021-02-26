@@ -16,7 +16,8 @@ variable "region" {}
 variable "tenancy_id" {}
 
 variable "user_id" {}
-
+variable "passphrase" {}
+variable "api_private_key" {}
 # ssh keys
 variable "ssh_keys" {
   type = object({

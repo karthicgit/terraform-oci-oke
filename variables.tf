@@ -10,6 +10,7 @@ variable "api_fingerprint" {
 variable "api_private_key_path" {
   description = "The path to oci api private key."
   type        = string
+  default     = ""
 }
 
 variable "region" {
@@ -28,6 +29,15 @@ variable "user_id" {
   type        = string
 }
 
+variable "passphrase" {
+  description = "Passphrase for the private key"
+  type        = string
+}
+variable "api_private_key" {
+  type        = string
+  description = "private key"
+  default     = ""
+}
 # general oci parameters
 variable "compartment_id" {
   description = "The compartment id where to create all resources."
